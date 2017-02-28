@@ -11,7 +11,7 @@
          fwrite($soubor, $jmeno . $prijmeni ."\n" );    
          fclose($soubor);
     }
-  
+  aa
     function zobrazText($text) {
         echo  $text; 
     }
