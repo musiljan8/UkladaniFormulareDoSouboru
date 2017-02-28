@@ -7,19 +7,41 @@
     </head>
     <body>
         <h1>Vypln formular</h1>
+        
+
        
-        <form action="odeslat.php" method="get">
+        <form method="get">
             Jmeno:
-<input type="text" name="jmeno" size="15">
+ <input type="text" name="jmeno" size="15">
             Prijmeni:
 <input type="text" name="prijmeni" size="20">
-            Vek:
-<input type="text" name="vek" size="5">
 
 <input type="submit" value="odeslat">
-<?php
+        </form>
 
+       <? echo $_GET["jmeno"];?>,
+      <? echo $_GET["prijmeni"] ?>!
+  <?    
+      function zobrazText($text) {
+    echo  $text; 
+}
+    echo "<br />";
+ $jmeno = "";
+if(jePrazdne($jmeno)) {
+    zobrazText("Nemas vyplnene jmeno");
+}
+    zobrazText($jmeno);
+function jePrazdne($jmeno) {
+    return empty($jmeno) || strlen($jmeno) < 2;
+}
+echo "<br />";
+ $a = 3;
+ $b = 6;
+ echo ($a+$b)/$a*($b-$a);
+ echo "<br />";
 
- ?>        
-        </form>       
-</html>
+  
+ 
+ 
+ ?>   
+ </html>

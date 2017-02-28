@@ -10,6 +10,12 @@
     <body>
         <h1>Formular</h1>
         
-      <? echo $_GET["jmeno"] ?>,
-      <? echo $_GET["prijmeni"] ?>,
-      <? echo $_GET["vek"] ?>;
+     
+     
+  
+ 
+
+      
+    </body>
+</html>
+     
