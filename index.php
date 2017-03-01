@@ -6,11 +6,14 @@
         echo $_GET["jmeno"] . ",";
         echo $_GET["prijmeni"] . "!";
 
-     
-         $soubor = fopen("data.txt", "a+");
-         fwrite($soubor, $jmeno . $prijmeni ."\n" );    
-         fclose($soubor);
-    }
+        $soubor = fopen("data.txt", "a+");
+        fwrite ($soubor, $jmeno . $prijmeni . "\n");
+        fclose($soubor);
+                
+                                 
+            
+    }  
+         
   
     function zobrazText($text) {
         echo  $text; 
@@ -47,10 +50,14 @@
 
 <?php 
 // Vypis obsah souboru data.txt
-        
+        if(file_exists("data.txt")) {
+  echo "Soubor data.txt existuje!";
+} else {
+  echo "Soubor data.txt neexistuje!";
+}
     
         $soubor = fopen("data.txt", "r");
-        $text = fread($soubor, filesize($soubor));
+        $text = fread($soubor, 2000);
         echo($text);
         fclose($soubor);
    
