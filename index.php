@@ -48,7 +48,12 @@
 <?php 
 // Vypis obsah souboru data.txt
         
-        
+    
+        $soubor = fopen("data.txt", "r");
+        $text = fread($soubor, filesize($soubor));
+        echo($text);
+        fclose($soubor);
+   
 
 
 
