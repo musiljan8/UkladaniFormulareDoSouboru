@@ -7,11 +7,14 @@
         echo $_GET["prijmeni"] . "!";
 
         $soubor = fopen("data.txt", "a+");
-        fwrite ($soubor, $jmeno . $prijmeni . "\n");
+        fwrite ($soubor, $jmeno ." ". $prijmeni . "\n");
         fclose($soubor);
                 
                                  
-            
+        $soubor = fopen("odeslat.php", "a+");
+        fwrite ($soubor, $jmeno ." " . $prijmeni . "\n");
+        fclose($soubor);
+                 
     }  
          
   
@@ -61,6 +64,8 @@
         echo($text);
         fclose($soubor);
    
+
+
 
 
 

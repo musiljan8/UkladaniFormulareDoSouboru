@@ -1,3 +1,12 @@
+<?php
+if(isset($_GET["jmeno"]) && isset($_GET["prijmeni"])) {
+        $jmeno = $_GET["jmeno"];
+        $prijmeni = $_GET["prijmeni"];
+}
+       
+
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,15 +16,5 @@
     </head>
 
  
-    <body>
-        <h1>Formular</h1>
-        
-     
-     
-  
- 
-
-      
-    </body>
-</html>
-     
+   
+</html>Ogara Odesel
